@@ -65,6 +65,7 @@ public class CalculatorActivity extends ActionBarActivity {
 	
 	public void calculateBMR(View view){
 		double BMR = 0;
+		double calorieCount; 
 		
 		EditText weightInput = (EditText) findViewById(R.id.weight_edit);
 		int weight = Integer.parseInt(weightInput.getText().toString());
