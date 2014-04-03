@@ -1,4 +1,4 @@
-package com.example.weightmate;
+package com.example.WeightMate1;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -92,7 +92,7 @@ public class CalculatorActivity extends ActionBarActivity {
 		
 		Intent intent = new Intent(this, CalculatorResultsActivity.class);
 		intent.putExtra(EXTRA_BMR, toSend);
-		startActivity(intent);
+		startActivity(intent);	
 	}
 
 }
