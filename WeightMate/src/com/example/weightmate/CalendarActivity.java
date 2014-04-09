@@ -1,29 +1,49 @@
 package com.example.weightmate;
 
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.os.Build;
+import android.widget.CalendarView;
+import android.widget.CalendarView.OnDateChangeListener;
 
 public class CalendarActivity extends ActionBarActivity {
-
+	public final static String EXTRA_YEAR = "com.example.weightmate.YEAR";
+	public final static String EXTRA_MONTH = "com.example.weightmate.MONTH";
+	public final static String EXTRA_DAY = "com.example.weightmate.DAY";
+	
 	@Override
-	public void onCreate(Bundle savedInstanceState) {
+	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_calendar);
+		setContentView(R.layout.fragment_calendar);
 
-		if (savedInstanceState == null) {
-			getSupportFragmentManager().beginTransaction()
-					.add(R.id.container, new PlaceholderFragment()).commit();
-		}
+		 CalendarView calendarView = (CalendarView)findViewById(R.id.calendar);
+	     calendarView.setOnDateChangeListener(new OnDateChangeListener() {
+	    	 
+	    	 //Checks for date selected
+	            public void onSelectedDayChange(CalendarView view, int year, int month,
+	                    int dayOfMonth) {
+	               sendDateInfo(year, month, dayOfMonth);
+	            }
+	        });
 	}
-
+	public void sendDateInfo(int year, int month, int dayOfMonth){ //Sends Date to DailyPlanner
+		Intent intent = new Intent(this, DailyPlannerActivity.class);
+		String yearStr, monthStr, dayStr;
+		yearStr = "" + year;
+		monthStr = "" + month;
+		dayStr = "" + dayOfMonth;
+		
+		intent.putExtra(EXTRA_YEAR, yearStr);
+		intent.putExtra(EXTRA_MONTH, monthStr);
+		intent.putExtra(EXTRA_DAY, dayStr);
+		startActivity(intent);
+	}
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 
