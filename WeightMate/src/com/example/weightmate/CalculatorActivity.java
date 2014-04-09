@@ -1,6 +1,5 @@
 package com.example.weightmate;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,15 +9,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.EditText;
 import android.widget.RadioButton;
- 
+import android.widget.Spinner;
 
 public class CalculatorActivity extends ActionBarActivity {
-	
-	public static double BMR = 0;
 	public final static String EXTRA_BMR = "com.example.weightmate.BMR";
 	
 	@Override
@@ -69,9 +64,14 @@ public class CalculatorActivity extends ActionBarActivity {
 		}
 	}
 	
+
+
+	
 	public void calculateBMR(View view){
-	 
+		double BMR = 0;
+		double calorieCount = 0; 
 		
+			
 		EditText weightInput = (EditText) findViewById(R.id.weight_edit);
 		int weight = Integer.parseInt(weightInput.getText().toString());
 		
@@ -85,21 +85,63 @@ public class CalculatorActivity extends ActionBarActivity {
 		RadioButton male = (RadioButton) findViewById(R.id.male_button);
 		RadioButton female = (RadioButton) findViewById(R.id.female_button);
 		
+		Spinner activity_factor = (Spinner)view.findViewById(R.id.activity_factor); 
+		String activity = activity_factor.getSelectedItem().toString(); 
 		
+			
 		if(female.isChecked()){
 			BMR = 655 + (4.3*weight) + (4.7*height) - (4.7*age);
+			if (activity == "sedentary (little to no exercise)"){
+				double activityNum = 0.2;
+				calorieCount = BMR + (BMR * activityNum); 
+			}
+			if (activity == "lightly active (exercise/sports 1&#8211;3 times/week)"){
+				double activityNum = 0.3;
+				calorieCount = BMR + (BMR * activityNum); 
+			}
+			if (activity == "moderately active (exercise/sports 3&#8211;5 times/week)"){
+				double activityNum = 0.4;
+				calorieCount = BMR + (BMR * activityNum); 
+			}
+			if (activity == "very active (hard exercise/sports 6&#8211;7 times/week)"){
+				double activityNum = 0.5;
+				calorieCount = BMR + (BMR * activityNum); 
+			}
+			if (activity == "extra active (very hard exercise/sports or physical job)"){
+				double activityNum = 0.6;
+				calorieCount = BMR + (BMR * activityNum); 
+			}
+		
 		}
 		else if(male.isChecked()){
 			BMR = 66 + (6.3*weight) + (12.9*height) - (6.8*age);
+			if (activity == "sedentary (little to no exercise)"){
+				double activityNum = 0.2;
+				calorieCount = BMR + (BMR * activityNum); 
+			}
+			if (activity == "lightly active (exercise/sports 1&#8211;3 times/week)"){
+				double activityNum = 0.3;
+				calorieCount = BMR + (BMR * activityNum); 
+			}
+			if (activity == "moderately active (exercise/sports 3&#8211;5 times/week)"){
+				double activityNum = 0.4;
+				calorieCount = BMR + (BMR * activityNum); 
+			}
+			if (activity == "very active (hard exercise/sports 6&#8211;7 times/week)"){
+				double activityNum = 0.5;
+				calorieCount = BMR + (BMR * activityNum); 
+			}
+			if (activity == "extra active (very hard exercise/sports or physical job)"){
+				double activityNum = 0.6;
+				calorieCount = BMR + (BMR * activityNum); 
+			}
 		}
 		
-		String toSend = "" + BMR;
+		String toSend = "" + calorieCount;
 		
 		Intent intent = new Intent(this, CalculatorResultsActivity.class);
 		intent.putExtra(EXTRA_BMR, toSend);
 		startActivity(intent);
 	}
-	
- 
 
 }
