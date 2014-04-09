@@ -1,0 +1,138 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.weightmate.BmiCalculatorActivity$PlaceholderFragment" >
+
+
+
+        <TextView
+            android:id="@+id/bmiWeightTextMetric"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/bmi_calculate_Button"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="29dp"
+            android:text="@string/bmi_weight_metric_text"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Button
+            android:id="@+id/bmiCalculateImperialButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/bmiCalcWeightTextFieldMetric"
+            android:layout_below="@+id/bmiCalcWeightTextFieldImperial"
+            android:onClick="toBmiCalculateImperial"
+            android:text="@string/bmi_imperial_calculate_button" />
+
+        <TextView
+            android:id="@+id/bmiHeightTextMetric"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bmiWeightTextMetric"
+            android:layout_alignLeft="@+id/bmiWeightTextMetric"
+            android:layout_marginBottom="20dp"
+            android:text="@string/bmi_height_metric_text"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/bmiCalcHeightTextFieldMetric"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/bmiHeightTextMetric"
+            android:layout_alignLeft="@+id/bmiCalcWeightTextFieldMetric"
+            android:layout_alignParentRight="true"
+            android:ems="4"
+            android:hint="cm"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/bmiCalcWeightTextFieldMetric"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/bmiWeightTextMetric"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/bmiHeightTextFeet"
+            android:ems="4"
+            android:hint="kg"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/bmiCalcHeightTextFieldImperial2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/bmi_calculate_Button"
+            android:layout_below="@+id/bmiCalcHeightTextFieldImperial1"
+            android:layout_toRightOf="@+id/bmiWeightTextPounds"
+            android:ems="4"
+            android:hint="inches"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/bmiHeightTextFeet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/bmiWeightTextPounds"
+            android:layout_marginTop="25dp"
+            android:text="@string/bmi_height_ft_text"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/bmiCalcHeightTextFieldImperial1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/bmiHeightTextFeet"
+            android:layout_alignLeft="@+id/bmiCalcHeightTextFieldImperial2"
+            android:layout_alignRight="@+id/bmiCalcHeightTextFieldImperial2"
+            android:ems="4"
+            android:hint="feet"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/bmiCalcWeightTextFieldImperial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/bmiWeightTextPounds"
+            android:layout_toRightOf="@+id/bmiWeightTextPounds"
+            android:ems="8"
+            android:hint="lbs."
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:id="@+id/bmiWeightTextPounds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/bmiCalcHeightTextFieldImperial2"
+            android:layout_marginTop="16dp"
+            android:text="@string/bmi_weight_lb_text"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Button
+            android:id="@+id/bmiCalculateMetricButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bmiCalcHeightTextFieldMetric"
+            android:layout_alignLeft="@+id/bmiHeightTextMetric"
+            android:layout_alignRight="@+id/bmiCalcHeightTextFieldMetric"
+            android:text="@string/bmi_metric_calculate_button"
+            android:onClick="toBmiCalculateMetric" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bmiCalculateMetricButton"
+            android:layout_below="@+id/bmiCalculateImperialButton"
+            android:layout_centerHorizontal="true"
+            android:text="OR"
+            android:textSize="75dp" />
+
+</RelativeLayout>

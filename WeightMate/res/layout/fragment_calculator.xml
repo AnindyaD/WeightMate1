@@ -49,27 +49,11 @@
         android:orientation="horizontal" >
 
         <RadioButton
-            android:id="@+id/male_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/male_button" />
-
-        <RadioButton
             android:id="@+id/female_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/female_button" />
     </RadioGroup>
-
-    <TextView
-        android:id="@+id/weight_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/age_text"
-        android:layout_below="@+id/age_edit"
-        android:layout_marginTop="14dp"
-        android:text="@string/weight_text"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
         android:id="@+id/height_text"
@@ -91,25 +75,15 @@
         android:ems="10"
         android:inputType="number" />
 
-    <TextView
-        android:id="@+id/activity_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/height_text"
-        android:layout_below="@+id/height_inches_edit"
-        android:layout_marginTop="20dp"
-        android:text="@string/activity_text"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
     <Button
         android:id="@+id/calculate_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/activity_text"
+        android:layout_alignLeft="@+id/height_text"
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/height_inches_text"
-        android:text="@string/calculate_button"
-        android:onClick="calculateBMR" />
+        android:onClick="calculateBMR"
+        android:text="@string/calculate_button" />
 
     <TextView
         android:id="@+id/height_feet_text"
@@ -120,13 +94,29 @@
         android:text="@string/height_feet_text"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
+    <RadioButton
+        android:id="@+id/male_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/radioGroup1"
+        android:layout_below="@+id/age_edit"
+        android:text="@string/male_button" />
+
+    <TextView
+        android:id="@+id/weight_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/male_button"
+        android:text="@string/weight_text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
     <EditText
         android:id="@+id/height_inches_edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/height_feet_text"
         android:layout_alignBottom="@+id/height_feet_text"
-        android:layout_toRightOf="@+id/height_feet_text"
+        android:layout_alignLeft="@+id/male_button"
         android:ems="2"
         android:inputType="number" />
 
@@ -134,9 +124,21 @@
         android:id="@+id/height_inches_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/activity_text"
+        android:layout_alignBaseline="@+id/height_feet_text"
+        android:layout_alignBottom="@+id/height_feet_text"
         android:layout_toRightOf="@+id/height_inches_edit"
         android:text="@string/height_inches_text"
         android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Spinner
+        
+        android:id="@+id/exercise_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:prompt="@string/spinner_prompt"
+        android:entries="@array/activities_spinner"
+         />
 
 </RelativeLayout>

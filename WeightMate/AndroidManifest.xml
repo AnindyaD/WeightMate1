@@ -10,7 +10,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/weightmate_logo_apple"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
@@ -61,6 +61,22 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.weightmate.BmiCalculatorActivity"
+            android:label="@string/title_activity_bmi_calculator"
+            android:parentActivityName="com.example.weightmate.ExtrasActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.weightmate.ExtrasActivity" />
+        </activity>
+        <activity
+            android:name="com.example.weightmate.BmiCalculatorResultsActivity"
+            android:label="@string/title_activity_bmi_calculator_results"
+            android:parentActivityName="com.weightmate.BmiCalculatorActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.weightmate.BmiCalculatorActivity" />
         </activity>
     </application>
 

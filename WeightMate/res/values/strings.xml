@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+	
+    <string name="spinner_prompt">Activity Level</string>
     <string name="app_name">WeightMate</string>
     <string name="action_settings">Settings</string>
     <!-- Homescreen Strings -->
@@ -16,9 +17,15 @@
     <string name="weight_text">Weight</string>
     <string name="male_button">Male</string>
     <string name="female_button">Female</string>
-    <string name="height_text">Height</string>
+    <string-array name="activities_spinner">
+        <item>Sedentary (little or no exercise) </item>
+        <item>Lightly Active (exercise 1 to 3 days/week) </item>
+        <item>Moderately Active (exercise 3 to 5 days/week) </item>
+        <item>Very Active (exercise 6 to 7 days a week) </item>
+        <item>Extra Active (pro sports or physical job)</item>
+    </string-array><string name="height_text">Height</string>
     <string name="height_feet_text">Feet</string>
-    <string name="height_inches_text">Inches</string>
+    <string name="height_inches_text">Inch</string>
     <string name="activity_text">Activity</string>
     <string name="calculate_button">Calculate</string>
     <!-- Food List Strings -->
@@ -31,5 +38,19 @@
     <string name="title_activity_calculator_results">CalculatorResultsActivity</string>
     <string name="title_activity_extras">Extras</string>
     <string name="hello_world">Hello world!</string>
-
+    <!-- BMI Calculator Strings -->
+    <string name="bmicalculator_button">Bavi Calculator</string>
+    <string name="title_activity_bmi_calculator">Body Mass Index Calculator</string>
+    <string name="bmi_height_ft_text">Height (Imperial)</string>
+    <string name="bmi_weight_lb_text">Weight (Imperial)</string>
+    <string name="bmi_imperial_calculate_button">Calculate (Imperial)</string>
+    <string name="bmi_height_metric_text">Height (Metric)</string>
+    <string name="bmi_weight_metric_text">Weight (Metric)</string>
+    <string name="bmi_metric_calculate_button">Calculate (Metric)</string>
+    <!-- BMI Calculator Results String -->
+    <string name="title_activity_bmi_calculator_results">Body Mass Index</string>
+    <string name="bmi_dialogue">Your BMI Is:</string>
+	
+    
+	
 </resources>
