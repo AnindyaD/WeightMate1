@@ -38,5 +38,16 @@
     <item>very active (hard exercise/sports 6&#8211;7 times/week)</item>
     <item>extra active (very hard exercise/sports or physical job)</item>
 </string-array>
-
+<!-- BMI Calculator Strings -->
+    <string name="bmicalculator_button">Bavi Calculator</string>
+    <string name="title_activity_bmi_calculator">Body Mass Index Calculator</string>
+    <string name="bmi_height_ft_text">Height (Imperial)</string>
+    <string name="bmi_weight_lb_text">Weight (Imperial)</string>
+    <string name="bmi_imperial_calculate_button">Calculate (Imperial)</string>
+    <string name="bmi_height_metric_text">Height (Metric)</string>
+    <string name="bmi_weight_metric_text">Weight (Metric)</string>
+    <string name="bmi_metric_calculate_button">Calculate (Metric)</string>
+    <!-- BMI Calculator Results String -->
+    <string name="title_activity_bmi_calculator_results">Body Mass Index</string>
+    <string name="bmi_dialogue">Your BMI Is:</string>
 </resources>
