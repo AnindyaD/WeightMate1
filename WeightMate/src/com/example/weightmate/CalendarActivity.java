@@ -22,7 +22,7 @@ public class CalendarActivity extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.fragment_calendar);
 
-		 CalendarView calendarView = (CalendarView)findViewById(R.id.calendar);
+		 CalendarView calendarView = (CalendarView)findViewById(R.id.calendarView1);
 	     calendarView.setOnDateChangeListener(new OnDateChangeListener() {
 	    	 
 	    	 //Checks for date selected

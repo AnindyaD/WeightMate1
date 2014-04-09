@@ -22,20 +22,19 @@ public class DailyPlannerActivity extends ActionBarActivity {
 		TextView yearView = (TextView) findViewById(R.id.textView1);
 		TextView monthView = (TextView) findViewById(R.id.textView2);
 		TextView dayView = (TextView) findViewById(R.id.textView3);
-		
 		yearView.setText(intent.getStringExtra(CalendarActivity.EXTRA_YEAR));
 		monthView.setText(intent.getStringExtra(CalendarActivity.EXTRA_MONTH));
 		dayView.setText(intent.getStringExtra(CalendarActivity.EXTRA_DAY));
 
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.daily_planner, menu);
-		return true;
-	}
+//	@Override
+//	public boolean onCreateOptionsMenu(Menu menu) {
+//
+//		// Inflate the menu; this adds items to the action bar if it is present.
+//		getMenuInflater().inflate(R.menu.daily_planner, menu);
+//		return true;
+//	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
