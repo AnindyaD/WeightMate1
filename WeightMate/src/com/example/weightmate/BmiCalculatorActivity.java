@@ -14,7 +14,7 @@ import android.widget.EditText;
 import android.os.Build;
 
 public class BmiCalculatorActivity extends ActionBarActivity {
-	public final static String CALCULATE_BMI = "com.example.weightmate.BMR";
+	public final static String CALCULATE_BMI = "";
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -65,6 +65,11 @@ public class BmiCalculatorActivity extends ActionBarActivity {
 			return rootView;
 		}
 	}
+	public void toBmiImperial (View view) {
+		Intent intent = new Intent (this,BmiMetricCalculatorActivity.class );
+		startActivity(intent);
+	}
+	
 	public void toBmiCalculateImperial (View view) {
 		
 		double BMI= 0;
@@ -87,21 +92,6 @@ public class BmiCalculatorActivity extends ActionBarActivity {
 		startActivity(intent);
 		
 	}
-	public void toBmiCalculateMetric (View view) {
-		
-		double BMI = 0;
-		EditText KiloInput = (EditText) findViewById(R.id.bmiCalcWeightTextFieldMetric);
-		double weightKilo = Integer.parseInt(KiloInput.getText().toString());
-		
-		EditText cmInput = (EditText) findViewById(R.id.bmiCalcHeightTextFieldMetric);
-		double heightCm = Integer.parseInt(cmInput.getText().toString());
-		
-		BMI = weightKilo / ((heightCm/100)*(heightCm/100));
-
-		String toSend = "" + Math.round(BMI);
-		Intent intent = new Intent (this,BmiCalculatorResultsActivity.class );
-		intent.putExtra(CALCULATE_BMI, toSend);
-		
-		startActivity(intent);
-	}
+	
+	
 }

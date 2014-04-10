@@ -10,7 +10,7 @@
     <string name="extras_button">Extra</string>
     <!-- Calendar Strings -->
     <string name="title_activity_calendar">Calendar</string>
-    <string name="title_activity_daily_planner">Daily Planner</string>
+        <string name="title_activity_daily_planner">Daily Planner</string>
     <!-- Calculator Strings -->
     <string name="title_activity_calculator">Calculator</string>
     <string name="age_text">Age</string>
@@ -32,14 +32,15 @@
     <string name="title_activity_calculator_results">CalculatorResultsActivity</string>
     <string name="title_activity_extras">Extras</string>
     <string name="hello_world">Hello world!</string>
-<string-array android:id="@+id/activity_factor" name="activity_factor">
-    <item>sedentary (little to no exercise)</item>
-    <item>lightly active (exercise/sports 1&#8211;3 times/week)</item>
-    <item>moderately active (exercise/sports 3&#8211;5 times/week)</item>
-    <item>very active (hard exercise/sports 6&#8211;7 times/week)</item>
-    <item>extra active (very hard exercise/sports or physical job)</item>
-</string-array>
-<!-- BMI Calculator Strings -->
+
+    <string-array android:id="@+id/activity_factor" name="activity_factor">
+        <item>sedentary (little to no exercise)</item>
+        <item>lightly active (exercise/sports 1&#8211;3 times/week)</item>
+        <item>moderately active (exercise/sports 3&#8211;5 times/week)</item>
+        <item>very active (hard exercise/sports 6&#8211;7 times/week)</item>
+        <item>extra active (very hard exercise/sports or physical job)</item>
+    </string-array>
+    <!-- BMI Calculator Strings -->
     <string name="bmicalculator_button">Bavi Calculator</string>
     <string name="title_activity_bmi_calculator">Body Mass Index Calculator</string>
     <string name="bmi_height_ft_text">Height (Imperial)</string>
@@ -51,4 +52,6 @@
     <!-- BMI Calculator Results String -->
     <string name="title_activity_bmi_calculator_results">Body Mass Index</string>
     <string name="bmi_dialogue">Your BMI Is:</string>
+    <string name="title_activity_bmi_imperial_calculator">BmiImperialCalculatorActivity</string>
+
 </resources>
