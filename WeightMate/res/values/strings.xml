@@ -10,6 +10,7 @@
     <string name="extras_button">Extra</string>
     <!-- Calendar Strings -->
     <string name="title_activity_calendar">Calendar</string>
+    <string name="title_activity_daily_planner">Daily Planner</string>
     <!-- Calculator Strings -->
     <string name="title_activity_calculator">Calculator</string>
     <string name="age_text">Age</string>

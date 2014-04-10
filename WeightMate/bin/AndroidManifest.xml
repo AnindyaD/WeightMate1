@@ -78,6 +78,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.weightmate.BmiCalculatorActivity" />
         </activity>
+         <activity
+            android:name="com.example.weightmate.DailyPlannerActivity"
+            android:label="@string/title_activity_daily_planner"
+            android:parentActivityName="com.weightmate.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.weightmate.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
